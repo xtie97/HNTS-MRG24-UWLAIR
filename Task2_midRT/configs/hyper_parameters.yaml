@@ -1,0 +1,63 @@
+_meta_: {}
+name: MRIRT_HNC_segmentation
+task: segmentation
+modality: MRI
+extra_modalities: {label21: label, label22: label} # label21: GTVp, label22: GTVn
+
+# specify the data and model paths
+dataroot: /UserData/Xin/MICAAI_Challenge/preRT/data/midRT_v1 
+datalist: /UserData/Xin/MICAAI_Challenge/preRT/data/folds/midRT_v1_all_716_fold0.json 
+data_file_base_dir: $@dataroot
+data_list_file_path: $@datalist
+bundle_root: null
+fold: 0
+ckpt_path: $@bundle_root + "/ckpt_fold0" 
+
+# define the network architecture
+network: {_target_: MASegResNetDS}
+sigmoid: false
+input_channels: 3
+output_classes: 3 # background, GTVp, GTVn
+class_names: [GTVp, GTVn]
+
+# set training hyper-parameters
+validate: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
+finetune: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
+infer: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
+    + '/prediction_' + @infer#data_list_key + '_val_fold1', data_list_key: testing}
+
+num_samples: 2  
+batch_size: 3  
+learning_rate: 0.0001
+roi_size: [160, 160, 128] # default: [192, 192, 128] / [160, 160, 128] / [128, 128, 128]
+num_epochs: 400 # 300 
+loss_fun: DiceCELoss
+loss: {_target_: $@loss_fun, include_background: false, squared_pred: false, smooth_nr: 1.0e-05,
+  smooth_dr: 1.0e-05, softmax: $not @sigmoid, sigmoid: $@sigmoid, to_onehot_y: $not
+    @sigmoid, batch: true}  
+num_warmup_epochs: 5 # for ConsineAnnealingLR scheduler
+optimizer: {_target_: torch.optim.AdamW, lr: '@learning_rate', weight_decay: 1.0e-05}
+
+# image and label preprocessing 
+resample: true
+resample_resolution: [1.0, 1.0, 1.0]
+crop_mode: ratio
+crop_ratios: [0.1, 0.45, 0.45]
+num_epochs_per_validation: 1
+num_epochs_per_saving: 1
+num_workers: 16
+
+# other settings
+quick: false # for quick test (8 cases)
+amp: true # automatic mixed precision (reduced memory usage)
+ckpt_save: true # save model checkpoints
+cache_rate: null 
+determ: true
+rng_seed: 716 # random seed for reproducibility
+normalize_mode: meanstd # normalize the input MRI
+multigpu: true
+image_size: [768, 768, 165]
+class_index: null
+intensity_bounds: [118.71328927675883, 687.8317456563313]
+spacing_lower: [0.4000000059604645, 0.4000000059604645, 1.0]
+spacing_upper: [0.9848484995722021, 0.9848484992980957, 2.5000000006958083]
