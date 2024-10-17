@@ -10,6 +10,17 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
 
 > **The code in this repository is provided to ensure the reproducibility of our submission to the [MICAAI HNTS-MRG 2024 grand challenge](https://hntsmrg24.grand-challenge.org/overview/).** 
 
+
+## Key Features
+- **Pre-Radiotherapy (Pre-RT) GTV Segmentation (Task 1)**:  
+  The DL models trained on combined pre-RT and mid-RT MRI datasets, yielding improved accuracy on hold-out test sets compared to models trained solely on pre-RT data.
+  
+- **Mid-Radiotherapy (Mid-RT) GTV Segmentation (Task 2)**:  
+  The DL models integrating prior information from pre-RT scans can significantly improve the performance. Introduced **mask-aware attention modules** to leverage pre-RT GTV masks in mid-RT segmentation. 
+
+- **Ensemble Approach**:  
+  Utilized an ensemble of 10 models for both tasks to improve robustness and overall performance.
+
 ## 📊 Results and Performance
 - **Pre-Radiotherapy (Task 1)**:
   - Average **DSCagg**: 0.794
@@ -20,32 +31,8 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
   - Average **DSCagg**: xxx
   - **GTVp** DSC: xxx
   - **GTVn** DSC: xxx
-
----
-
-## Key Features
-- **Pre-Radiotherapy (Pre-RT) Tumor Segmentation (Task 1)**:  
-  A DL model trained on combined pre-RT and mid-RT MRI datasets, yielding improved accuracy on hold-out test sets compared to models trained solely on pre-RT data.
-  
-- **Mid-Radiotherapy (Mid-RT) Tumor Segmentation (Task 2)**:  
-  Introduced **mask-aware attention modules** to leverage pre-RT GTV masks in mid-RT data segmentation, providing slight performance gains over baseline methods.
-
-- **Ensemble Approach**:  
-  Utilized an ensemble of 10 models for both tasks to improve robustness and overall performance.
-
-## Results
-- **Task 1 (Pre-RT Segmentation)**:
-  - Average **DSCagg**: 0.794
-  - Primary GTV (GTVp) DSC: 0.745
-  - Metastatic Lymph Nodes (GTVn) DSC: 0.844
-
-- **Task 2 (Mid-RT Segmentation)**:
-  - Average **DSCagg**: 0.733
-  - GTVp DSC: 0.607
-  - GTVn DSC: 0.859
-
+    
 ## 🧠 Model Architectures and Visualizations
-Here is a brief overview of the models we developed for GTV segmentation, using **SegResNet** as the backbone with advanced supervision techniques and mask-aware attention.
 
 ### Task 1: Pre-Radiotherapy Segmentation
 
