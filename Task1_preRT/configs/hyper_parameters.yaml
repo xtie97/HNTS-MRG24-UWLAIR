@@ -4,8 +4,8 @@ task: segmentation
 modality: MRI
 
 # specify the data and model paths
-dataroot: data/preRT
-datalist: data/folds/pre_midRT_all_12_fold0.json  
+dataroot: /UserData/Xin/MICAAI_Challenge/preRT/data/preRT
+datalist: /UserData/Xin/MICAAI_Challenge/preRT/data/folds/pre_midRT_all_12_fold0.json  
 data_file_base_dir: $@dataroot
 data_list_file_path: $@datalist
 bundle_root: null
@@ -14,12 +14,12 @@ ckpt_path: $@bundle_root + "/ckpt_fold0"
 
 # define the network architecture
 network:
-  {_target_: SegResNetDS
-  init_filters: 32
-  blocks_down: [1, 2, 2, 4, 4, 4]
-  norm: INSTANCE # INSTANCE , BATCH
-  in_channels: '@input_channels'
-  out_channels: '@output_classes'
+  {_target_: SegResNetDS,
+  init_filters: 32,
+  blocks_down: [1, 2, 2, 4, 4, 4],
+  norm: INSTANCE, # INSTANCE , BATCH
+  in_channels: '@input_channels',
+  out_channels: '@output_classes',
   dsdepth: 4}
 sigmoid: false
 input_channels: 1
@@ -32,8 +32,8 @@ validate: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
 infer: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
     + '/prediction_' + @infer#data_list_key + '_fold0', data_list_key: testing}
 
-num_samples: 2
-batch_size: 4
+num_samples: 1 #2
+batch_size: 1 #4
 learning_rate: 0.0001
 roi_size: [192, 192, 128]
 num_epochs: 400 # 300
