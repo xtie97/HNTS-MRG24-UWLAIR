@@ -122,3 +122,11 @@ We also provide all the models used in our final submission for reproducibility.
 We acknowledge the organizers of the HNTS-MRG 24 Challenge for releasing high-quality, well-annotated data and for holding such a great challenge to advance the field of image-guided adaptive radiotherapy. We also thank the Center for High Throughput Computing (CHTC) at University of Wisconsin-Madison for providing GPU resources. 
 
 Our code was adapted from the Auto3dseg pipeline in [MONAI](https://github.com/Project-MONAI/MONAI).
+
+## UW LAIR Team Contributors
+[Xin Tie](https://www.linkedin.com/in/xintie8254b6157/)
+[Weijie Chen](https://www.linkedin.com/in/winstonchen2017/)
+[Zachary Huemann](https://www.linkedin.com/in/zach-huemann/)
+[Brayden Schott](https://www.linkedin.com/in/brayden-schott-04693b109/)
+[Nuohao Liu](https://www.linkedin.com/in/nuohao-liu/)
+[Tyler Bradshaw](https://radiology.wisc.edu/profile/tyler-bradshaw-1400/) (Advisor)
