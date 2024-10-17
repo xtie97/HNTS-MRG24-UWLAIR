@@ -1,9 +1,11 @@
-# Deep Learning for Gross Tumor Volume (GTV) Segmentation in MRI-Guided Adaptive Radiotherapy (MRgART)
+# 🎯 Deep Learning for GTV Segmentation in MRI-Guided Adaptive Radiotherapy (MRgART) 🎯
 
 ## Overview
-Accurate segmentation of gross tumor volume (GTV) is crucial for effective MRI-guided adaptive radiotherapy (MRgART) in head and neck cancer. Manual segmentation is labor-intensive and susceptible to interobserver variability. This project aims to address these challenges by leveraging **deep learning (DL)** models to automatically delineate GTVs in both **pre-radiotherapy (pre-RT)** and **mid-radiotherapy (mid-RT)** phases.
+Accurate segmentation of gross tumor volume (GTV) is crucial for effective MRI-guided adaptive radiotherapy (MRgART) in head and neck cancer. Manual segmentation is labor-intensive and susceptible to interobserver variability. This project aims to address these challenges by leveraging **deep learning (DL)** models to automatically delineate GTVs on both **pre-radiotherapy (pre-RT)** and **mid-radiotherapy (mid-RT)** MRI scans. 
 
-We present a series of DL models based on **SegResNet** for longitudinal GTV segmentation, offering potential to streamline MRgART workflows.
+We present a series of DL models for longitudinal GTV segmentation, offering potential to streamline radiation oncology workflows in ART.
+
+The code in this repository is to ensure reproducibility of our submission to MICAAI HNTS-MRG 2024 grand challenge. 
 
 ## Key Features
 - **Pre-Radiotherapy (Pre-RT) Tumor Segmentation (Task 1)**:  
