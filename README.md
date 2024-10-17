@@ -22,6 +22,7 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
   Utilized an ensemble of 10 models for both tasks to improve robustness and overall performance.
 
 ## 📊 Results and Performance
+   In the final testing phase: 
 - **Pre-Radiotherapy (Task 1)**:
   - Average **DSCagg**: 0.794
   - **Primary GTV (GTVp)** DSC: 0.745
