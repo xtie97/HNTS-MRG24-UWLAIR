@@ -79,10 +79,15 @@ To install and run this project, you can use the pre-configured **Docker** conta
 
 
 ## ⚙️ Usage
-After installing the dependencies, use the following script to run GTV segmentation on MRI scans:
+Once inside the Docker container, for Task1, please go to the folder **Task1_preRT**. Feel free to make changes in **configs/hyper_parameters.yaml**. Note that the parameters in this yaml file are the same with those used in our final submission. After specifying the parameters (especially the path to your data root and data list), you can start running the training.
 ```bash
-python run.py --input <path_to_mri> --output <path_to_output>
+cd Task1_preRT
+python run.py
 ```
+
+## Models:
+We also release all the models in our final submission. Feel free to download them via the following link:
+
 
 ## 🙏 Acknowledgements
 We acknowledge the organizers of the HNTS-MRG 24 Challenge for releasing high-quality, well-annotated data and for holding such a great challenge to advance the field of image-guided adaptive radiotherapy. We also thank the Center for High Throughput Computing (CHTC) at University of Wisconsin-Madison for providing GPU resources. 
