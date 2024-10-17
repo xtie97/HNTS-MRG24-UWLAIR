@@ -24,7 +24,7 @@ class_names: [GTVp, GTVn]
 validate: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
 finetune: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
 infer: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
-    + '/prediction_' + @infer#data_list_key + '_val_fold1', data_list_key: testing}
+    + '/prediction_' + @infer#data_list_key + '_fold0', data_list_key: testing}
 
 num_samples: 2  
 batch_size: 3  
