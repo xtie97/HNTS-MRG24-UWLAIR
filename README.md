@@ -33,7 +33,7 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
   - **GTVp** DSC: xxx
   - **GTVn** DSC: xxx
     
-## 🧠 Model Architectures and Visualizations
+## Model Architectures and Visualizations
 
 ### Task 1: Pre-Radiotherapy Segmentation
 
@@ -75,19 +75,47 @@ To install and run this project, you can use the pre-configured **Docker** conta
    ```bash
    docker run -it --rm -v $(pwd):/workspace xtie97/monai_wb
    ```
-- This command mounts your current project directory ($(pwd)) to the /workspace folder in the container for seamless access to your code.
-- Use -it for interactive mode and --rm to remove the container once you are done.
+  - This command mounts your current project directory ($(pwd)) to the /workspace folder in the container for seamless access to your code.
+  - Use -it for interactive mode and --rm to remove the container once you are done.
 
 
 ## ⚙️ Usage
-Once inside the Docker container, for Task1, please go to the folder **Task1_preRT**. Feel free to make changes in **configs/hyper_parameters.yaml**. Note that the parameters in this yaml file are the same with those used in our final submission. After specifying the parameters (especially the path to your data root and data list), you can start running the training.
+Once inside the Docker container, follow the instructions below to train models for both Task 1 and Task 2.
+### Task 1: Pre-RT Training
+1. Navigate to the **Task1_preRT** folder:
 ```bash
 cd Task1_preRT
+```
+2. Open and modify the **configs/hyper_parameters.yaml** file to adjust the training parameters:
+   - The parameters in this YAML file are the same as those used in our final submission to Task 1.
+   - Make sure to update the paths for your data root and data list.
+3. Start training by running the following command:
+```bash
 python run.py
 ```
+4. If you want to run inference, please change the following in the **configs/hyper_parameters.yaml** file:
+ ```bash
+infer: {enabled: true, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
+    + '/prediction_' + @infer#data_list_key + '_fold0', data_list_key: testing}
+``` 
+### Task 2: Mid-RT Training
+1. Navigate to the **Task2_midRT** folder:
+```bash
+cd Task2_midRT
+```
+2. Modify the configs/hyper_parameters.yaml file:
+ - Similar to Task 1, the parameters in this YAML file are the same as those used in our final submission to Task 2.
+ - Update the paths for your data root and data list.
+3. Start training by running the following command:
+```bash
+python run.py
+``` 
 
-## Models:
-We also release all the models in our final submission. Feel free to download them via the following link:
+
+## Model Weights:
+We also provide all the models used in our final submission for reproducibility. You can download the pre-trained models via the following link:
+  - [Dropbox](https://www.dropbox.com/scl/fo/eb5wrng0hxi6lmycsxiyf/ADATxiQ-1DqD_ILW-Snef8U?rlkey=xugmzfs22um6orvxzrnloervl&st=5dccg8qd&dl=0)
+
 
 
 ## 🙏 Acknowledgements
