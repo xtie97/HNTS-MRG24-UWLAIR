@@ -1,0 +1,8 @@
+monai
+nibabel
+itk>=5.2
+pynrrd
+pydicom
+pillow!=8.3.0  # https://github.com/python-pillow/Pillow/issues/5571
+SimpleITK
+connected-components-3d
