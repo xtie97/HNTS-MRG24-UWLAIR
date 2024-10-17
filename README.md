@@ -120,3 +120,5 @@ We also provide all the models used in our final submission for reproducibility.
 
 ## 🙏 Acknowledgements
 We acknowledge the organizers of the HNTS-MRG 24 Challenge for releasing high-quality, well-annotated data and for holding such a great challenge to advance the field of image-guided adaptive radiotherapy. We also thank the Center for High Throughput Computing (CHTC) at University of Wisconsin-Madison for providing GPU resources. 
+
+Our code was adapted from the Auto3dseg pipeline in [MONAI](https://github.com/Project-MONAI/MONAI).
