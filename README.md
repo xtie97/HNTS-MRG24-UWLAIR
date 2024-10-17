@@ -36,11 +36,11 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
 
 ### Task 1: Pre-Radiotherapy Segmentation
 
-![Pre-RT Model Architecture](./images/pre_rt_model.png)
+![Pre-RT Model Architecture](./images/pre_rt_model.jpg)
 
 ### Task 2: Mid-Radiotherapy Segmentation with Mask-Aware Attention
 
-![Mid-RT Model Architecture](./images/mid_rt_model.png)
+![Mid-RT Model Architecture](./images/mid_rt_model_updated.jpg)
 
 ---
 
@@ -48,10 +48,10 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
 
 ### Segmentation of GTVs in MRI Scans:
 - **Example 1**: Pre-RT GTV segmentation
-  ![Example 1](./images/example_pre_rt.png)
+  ![Example 1](./images/example_pre_rt.jpg)
   
 - **Example 2**: Mid-RT GTV segmentation
-  ![Example 2](./images/example_mid_rt.png)
+  ![Example 2](./images/example_mid_rt.jpg)
 
 
 ## 🛠 Installation
