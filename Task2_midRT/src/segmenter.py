@@ -1599,8 +1599,6 @@ class Segmenter:
         avg_loss = avg_dice1 = avg_dice2 = avg_dice = 0
         start_time = time.time()
 
-        # In DDP, each replica has a subset of data, but if total data length is not evenly divisible by num_replicas, then some replicas has 1 extra repeated item.
-        # For proper validation with batch of 1, we only want to collect metrics for non-repeated items, hence let's compute a proper subset length
         nonrepeated_data_length = len(val_loader.dataset)
         sampler = val_loader.sampler
         if (
