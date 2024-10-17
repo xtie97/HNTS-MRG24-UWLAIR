@@ -16,7 +16,7 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
   The DL models trained on combined pre-RT and mid-RT MRI datasets, yielding improved accuracy on hold-out test sets compared to models trained solely on pre-RT data.
   
 - **Mid-Radiotherapy (Mid-RT) GTV Segmentation (Task 2)**:  
-  The DL models integrating prior information from pre-RT scans can significantly improve the performance. Introduced **mask-aware attention modules** to leverage pre-RT GTV masks in mid-RT segmentation. 
+  The DL models integrating prior information from pre-RT scans can significantly improve the performance. We also introduced **mask-aware attention modules** to leverage pre-RT GTV masks in mid-RT segmentation. 
 
 - **Ensemble Approach**:  
   Utilized an ensemble of 10 models for both tasks to improve robustness and overall performance.
