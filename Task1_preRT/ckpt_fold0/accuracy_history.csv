@@ -1,0 +1,2 @@
+epoch	metric_class1	metric_class2	metric	loss	iter	time	train_time	validation_time	epoch_time
+0	0.09	2.62	1.35	0.9900	0	702.24s	506.80s	181.37s	688.16s

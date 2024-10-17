@@ -1,0 +1,4 @@
+- {best_avg_dice_score_epoch: 0, best_avg_dice_score_class1: 0.0858, best_avg_dice_score_class2: 2.6216,
+  best_avg_dice_score: 1.3537, save_time: 4.7755, train_time: 506.80s, validation_time: 181.37s,
+  epoch_time: 688.16s, model: /UserData/Xin/MICAAI_Challenge/CHTC/HNC_code_preRT_segresnet/Task1_preRT/ckpt_fold0/model.pt,
+  date: '2024-10-17 01:57:06'}
