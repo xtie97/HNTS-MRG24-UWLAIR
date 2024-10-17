@@ -1,4 +1,4 @@
-# 🎯 Deep Learning for GTV Segmentation in MRI-Guided Adaptive Radiotherapy (MRgART) 🎯
+# 🎯 Deep Learning for Longitudinal Gross Tumor Volume Segmentation in MRI-Guided Adaptive Radiotherapy 🎯
 
 ![GitHub Stars](https://img.shields.io/github/stars/xtie97/HNTS-MRG24-UWLAIR?style=social) 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
