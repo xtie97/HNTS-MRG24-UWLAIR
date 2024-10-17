@@ -42,7 +42,6 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
 
 ![Mid-RT Model Architecture](./images/mid_rt_model_updated.jpg)
 
----
 
 ## 💡 Example Use Cases
 
@@ -53,22 +52,37 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
 - **Example 2**: Mid-RT GTV segmentation
   ![Example 2](./images/example_mid_rt.jpg)
 
+---
 
 ## 🛠 Installation
 
-To install and run this project, clone the repository and install the required dependencies:
+To install and run this project, you can use the pre-configured **Docker** container for easy setup. The Docker image is hosted on Docker Hub.
 
-```bash
-git clone https://github.com/xtie97/HNTS-MRG24-UWLAIR.git
-cd HNTS-MRG24-UWLAIR
-pip install -r requirements.txt
-```
+### Steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/xtie97/HNTS-MRG24-UWLAIR.git
+   cd HNTS-MRG24-UWLAIR
+   ```
+2. **Pull the Docker image from Docker Hub**:
+   ```bash
+   docker pull xtie97/monai_wb
+   ```
+
+3. **Run the Docker container**:
+   ```bash
+   docker run -it --rm -v $(pwd):/workspace xtie97/monai_wb
+   ```
+- This command mounts your current project directory ($(pwd)) to the /workspace folder in the container for seamless access to your code.
+- Use -it for interactive mode and --rm to remove the container once you are done.
+
 
 ## ⚙️ Usage
 After installing the dependencies, use the following script to run GTV segmentation on MRI scans:
 ```bash
-python run_segmenter.py --input <path_to_mri> --output <path_to_output>
+python run.py --input <path_to_mri> --output <path_to_output>
 ```
 
 ## 🙏 Acknowledgements
-This project was developed as part of the MICAAI Challenge. Special thanks to the research team for their guidance and collaboration.
+We acknowledge the organizers of the HNTS-MRG 24 Challenge for releasing high-quality, well-annotated data and for holding such a great challenge to advance the field of image-guided adaptive radiotherapy. We also thank the Center for High Throughput Computing (CHTC) at University of Wisconsin-Madison for providing GPU resources. 
