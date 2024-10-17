@@ -4,8 +4,8 @@ task: segmentation
 modality: MRI
 
 # specify the data and model paths
-dataroot: /UserData/Xin/MICAAI_Challenge/preRT/data/preRT
-datalist: /UserData/Xin/MICAAI_Challenge/preRT/data/folds/pre_midRT_all_12_fold0.json  
+dataroot: data/preRT
+datalist: folds/pre_midRT_all_12_fold0.json  
 data_file_base_dir: $@dataroot
 data_list_file_path: $@datalist
 bundle_root: null
