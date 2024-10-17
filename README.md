@@ -75,11 +75,13 @@ To install and run this project, clone the repository and install the required d
 git clone https://github.com/xtie97/HNTS-MRG24-UWLAIR.git
 cd HNTS-MRG24-UWLAIR
 pip install -r requirements.txt
+```
 
 ## ⚙️ Usage
 After installing the dependencies, use the following script to run GTV segmentation on MRI scans:
 ```bash
 python run_segmenter.py --input <path_to_mri> --output <path_to_output>
+```
 
 ## 🙏 Acknowledgements
 This project was developed as part of the MICAAI Challenge. Special thanks to the research team for their guidance and collaboration.
