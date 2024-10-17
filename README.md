@@ -1,1 +1,42 @@
-Under construction
+# Deep Learning for Gross Tumor Volume (GTV) Segmentation in MRI-Guided Adaptive Radiotherapy (MRgART)
+
+## Overview
+Accurate segmentation of gross tumor volume (GTV) is crucial for effective MRI-guided adaptive radiotherapy (MRgART) in head and neck cancer. Manual segmentation is labor-intensive and susceptible to interobserver variability. This project aims to address these challenges by leveraging **deep learning (DL)** models to automatically delineate GTVs in both **pre-radiotherapy (pre-RT)** and **mid-radiotherapy (mid-RT)** phases.
+
+We present a series of DL models based on **SegResNet** for longitudinal GTV segmentation, offering potential to streamline MRgART workflows.
+
+## Key Features
+- **Pre-Radiotherapy (Pre-RT) Tumor Segmentation (Task 1)**:  
+  A DL model trained on combined pre-RT and mid-RT MRI datasets, yielding improved accuracy on hold-out test sets compared to models trained solely on pre-RT data.
+  
+- **Mid-Radiotherapy (Mid-RT) Tumor Segmentation (Task 2)**:  
+  Introduced **mask-aware attention modules** to leverage pre-RT GTV masks in mid-RT data segmentation, providing slight performance gains over baseline methods.
+
+- **Ensemble Approach**:  
+  Utilized an ensemble of 10 models for both tasks to improve robustness and overall performance.
+
+## Results
+- **Task 1 (Pre-RT Segmentation)**:
+  - Average **DSCagg**: 0.794
+  - Primary GTV (GTVp) DSC: 0.745
+  - Metastatic Lymph Nodes (GTVn) DSC: 0.844
+
+- **Task 2 (Mid-RT Segmentation)**:
+  - Average **DSCagg**: 0.733
+  - GTVp DSC: 0.607
+  - GTVn DSC: 0.859
+
+## Model Architecture
+- **Backbone**:  
+  The backbone of the model is **SegResNet** with deep supervision, enabling better feature extraction and improved accuracy.
+
+- **Mask-Aware Attention Modules (Task 2)**:  
+  Used attention mechanisms to allow pre-RT GTV masks to influence intermediate features, enhancing segmentation accuracy for mid-RT data.
+
+## Installation
+To get started, clone the repository and install the required dependencies:
+
+```bash
+git clone https://github.com/xtie97/HNTS-MRG24-UWLAIR.git
+cd HNTS-MRG24-UWLAIR
+pip install -r requirements.txt
