@@ -1,6 +1,6 @@
 import os
 from monai.utils import optional_import
-from src.segmenter import main, run_segmenter
+from src.segmenter import main
 
 if __name__ == "__main__":
     # specify the visible CUDA devices
