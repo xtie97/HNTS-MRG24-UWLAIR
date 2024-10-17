@@ -1,0 +1,8 @@
+- {best_avg_dice_score_epoch: 0, best_avg_dice_score_class1: 0.0000, best_avg_dice_score_class2: 0.0019,
+  best_avg_dice_score: 0.0009, save_time: 4.6203, train_time: 757.22s, validation_time: 247.40s,
+  epoch_time: 1004.62s, model: /UserData/Xin/MICAAI_Challenge/CHTC/HNC_code_midRT_multi_channel_v10/Task2_midRT/ckpt_fold0/model.pt,
+  date: '2024-10-16 22:17:08'}
+- {best_avg_dice_score_epoch: 10, best_avg_dice_score_class1: 25.8372, best_avg_dice_score_class2: 74.1133,
+  best_avg_dice_score: 49.9752, save_time: 4.9248, train_time: 746.10s, validation_time: 246.05s,
+  epoch_time: 992.15s, model: /UserData/Xin/MICAAI_Challenge/CHTC/HNC_code_midRT_multi_channel_v10/Task2_midRT/ckpt_fold0/model.pt,
+  date: '2024-10-17 00:26:14'}
