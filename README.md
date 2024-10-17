@@ -19,7 +19,7 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
   The DL models integrating prior information from pre-RT scans can significantly improve the performance. We also introduced **mask-aware attention modules** to leverage pre-RT GTV masks in mid-RT segmentation. 
 
 - **Ensemble Approach**:  
-  Utilized an ensemble of 10 models for both tasks to improve robustness and overall performance.
+  Utilized an ensemble of 10 models for both tasks to improve robustness and overall performance. (Our model weights can be downloaded below)
 
 ## 📊 Results and Performance
    In the final testing phase: 
