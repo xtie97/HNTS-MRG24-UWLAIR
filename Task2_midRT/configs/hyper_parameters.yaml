@@ -5,8 +5,8 @@ modality: MRI
 extra_modalities: {label21: label, label22: label} # label21: GTVp, label22: GTVn
 
 # specify the data and model paths
-dataroot: /UserData/Xin/MICAAI_Challenge/preRT/data/midRT_v1 
-datalist: /UserData/Xin/MICAAI_Challenge/preRT/data/folds/midRT_v1_all_716_fold0.json 
+dataroot: data/midRT_v1 
+datalist: data/folds/midRT_v1_all_716_fold0.json 
 data_file_base_dir: $@dataroot
 data_list_file_path: $@datalist
 bundle_root: null
