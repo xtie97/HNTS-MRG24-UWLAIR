@@ -32,8 +32,8 @@ validate: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
 infer: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
     + '/prediction_' + @infer#data_list_key + '_fold0', data_list_key: testing}
 
-num_samples: 1 #2
-batch_size: 1 #4
+num_samples: 2
+batch_size: 4
 learning_rate: 0.0001
 roi_size: [192, 192, 128]
 num_epochs: 400 # 300
