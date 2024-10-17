@@ -1,9 +1,5 @@
 # 🎯 Deep Learning for GTV Segmentation in MRI-Guided Adaptive Radiotherapy (MRgART) 🎯
 
-![Project Banner](./images/banner.png)
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) 
-![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue) 
 ![GitHub Stars](https://img.shields.io/github/stars/xtie97/HNTS-MRG24-UWLAIR?style=social) 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
 
@@ -13,6 +9,19 @@ Accurate segmentation of gross tumor volume (GTV) is crucial for effective MRI-g
 We present a series of DL models for longitudinal GTV segmentation, offering potential to streamline radiation oncology workflows in ART.
 
 The code in this repository is to ensure reproducibility of our submission to MICAAI HNTS-MRG 2024 grand challenge. 
+
+## 📊 Results and Performance
+- **Pre-Radiotherapy (Task 1)**:
+  - Average **DSCagg**: 0.794
+  - **Primary GTV (GTVp)** DSC: 0.745
+  - **Metastatic Lymph Nodes (GTVn)** DSC: 0.844
+
+- **Mid-Radiotherapy (Task 2)**:
+  - Average **DSCagg**: 0.733
+  - **GTVp** DSC: 0.607
+  - **GTVn** DSC: 0.859
+
+---
 
 ## Key Features
 - **Pre-Radiotherapy (Pre-RT) Tumor Segmentation (Task 1)**:  
@@ -35,17 +44,42 @@ The code in this repository is to ensure reproducibility of our submission to MI
   - GTVp DSC: 0.607
   - GTVn DSC: 0.859
 
-## Model Architecture
-- **Backbone**:  
-  The backbone of the model is **SegResNet** with deep supervision, enabling better feature extraction and improved accuracy.
+## 🧠 Model Architectures and Visualizations
+Here is a brief overview of the models we developed for GTV segmentation, using **SegResNet** as the backbone with advanced supervision techniques and mask-aware attention.
 
-- **Mask-Aware Attention Modules (Task 2)**:  
-  Used attention mechanisms to allow pre-RT GTV masks to influence intermediate features, enhancing segmentation accuracy for mid-RT data.
+### Task 1: Pre-Radiotherapy Segmentation
 
-## Installation
-To get started, clone the repository and install the required dependencies:
+![Pre-RT Model Architecture](./images/pre_rt_model.png)
+
+### Task 2: Mid-Radiotherapy Segmentation with Mask-Aware Attention
+
+![Mid-RT Model Architecture](./images/mid_rt_model.png)
+
+---
+
+## 💡 Example Use Cases
+
+### Segmentation of GTVs in MRI Scans:
+- **Example 1**: Pre-RT GTV segmentation
+  ![Example 1](./images/example_pre_rt.png)
+  
+- **Example 2**: Mid-RT GTV segmentation
+  ![Example 2](./images/example_mid_rt.png)
+
+
+## 🛠 Installation
+
+To install and run this project, clone the repository and install the required dependencies:
 
 ```bash
 git clone https://github.com/xtie97/HNTS-MRG24-UWLAIR.git
 cd HNTS-MRG24-UWLAIR
 pip install -r requirements.txt
+
+## ⚙️ Usage
+After installing the dependencies, use the following script to run GTV segmentation on MRI scans:
+```bash
+python run_segmenter.py --input <path_to_mri> --output <path_to_output>
+
+## 🙏 Acknowledgements
+This project was developed as part of the MICAAI Challenge. Special thanks to the research team for their guidance and collaboration.
