@@ -17,9 +17,9 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
   - **Metastatic Lymph Nodes (GTVn)** DSC: 0.844
 
 - **Mid-Radiotherapy (Task 2)**:
-  - Average **DSCagg**: 0.733
-  - **GTVp** DSC: 0.607
-  - **GTVn** DSC: 0.859
+  - Average **DSCagg**: xxx
+  - **GTVp** DSC: xxx
+  - **GTVn** DSC: xxx
 
 ---
 
