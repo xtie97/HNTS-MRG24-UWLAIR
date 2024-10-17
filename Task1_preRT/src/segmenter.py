@@ -34,7 +34,7 @@ from monai.inferers import SlidingWindowInferer
 from monai.losses import DeepSupervisionLoss
 from monai.metrics import CumulativeAverage, compute_dice, do_metric_reduction
 from monai.networks.utils import one_hot
-from model import get_network
+from .model import get_network
 from monai.optimizers.lr_scheduler import WarmupCosineSchedule
 from monai.transforms import (
     AsDiscreted,
