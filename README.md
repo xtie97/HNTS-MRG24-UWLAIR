@@ -3,12 +3,12 @@
 ![GitHub Stars](https://img.shields.io/github/stars/xtie97/HNTS-MRG24-UWLAIR?style=social) 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
 
-## Overview
+## 🚀 Overview
 Accurate segmentation of gross tumor volume (GTV) is crucial for effective MRI-guided adaptive radiotherapy (MRgART) in head and neck cancer. Manual segmentation is labor-intensive and susceptible to interobserver variability. This project aims to address these challenges by leveraging **deep learning (DL)** models to automatically delineate GTVs on both **pre-radiotherapy (pre-RT)** and **mid-radiotherapy (mid-RT)** MRI scans. 
 
 We present a series of DL models for longitudinal GTV segmentation, offering potential to streamline radiation oncology workflows in ART.
 
-The code in this repository is to ensure reproducibility of our submission to MICAAI HNTS-MRG 2024 grand challenge. 
+> **The code in this repository is provided to ensure the reproducibility of our submission to the [MICAAI HNTS-MRG 2024 grand challenge](https://hntsmrg24.grand-challenge.org/overview/).** 
 
 ## 📊 Results and Performance
 - **Pre-Radiotherapy (Task 1)**:
