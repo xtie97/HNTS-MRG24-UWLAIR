@@ -11,7 +11,7 @@ We present a series of DL models for longitudinal GTV segmentation, offering pot
 > **The code in this repository is provided to ensure the reproducibility of our submission to the [MICAAI HNTS-MRG 2024 grand challenge](https://hntsmrg24.grand-challenge.org/overview/).** 
 
 ## News
-We (*UW LAIR team*) achieved  **1st place** in the Task 2 mid-RT GTV segmentation!
+🎉 We (*UW LAIR team*) achieved **1st Place** in Task 2: Mid-RT GTV Segmentation at the MICAAI HNTS-MRG 2024 Challenge! 🎉  
 ![Podium](./images/Podium.jpg)
 
 ## Key Features
