@@ -133,3 +133,6 @@ Our code was adapted from the Auto3dseg pipeline in [MONAI](https://github.com/P
 [Brayden Schott](https://www.linkedin.com/in/brayden-schott-04693b109/), 
 [Nuohao Liu](https://www.linkedin.com/in/nuohao-liu/), 
 [Tyler Bradshaw](https://radiology.wisc.edu/profile/tyler-bradshaw-1400/) (PI)
+
+## Citation 📚
+Tie, X., Chen, W., Huemann, Z., Schott, B., Liu, N., Bradshaw, T.J. (2025). Deep Learning for Longitudinal Gross Tumor Volume Segmentation in MRI-Guided Adaptive Radiotherapy for Head and Neck Cancer. In: Wahid, K.A., Dede, C., Naser, M.A., Fuller, C.D. (eds) Head and Neck Tumor Segmentation for MR-Guided Applications. HNTSMRG 2024. Lecture Notes in Computer Science, vol 15273. Springer, Cham. https://doi.org/10.1007/978-3-031-83274-1_7
